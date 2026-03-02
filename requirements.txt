@@ -1,0 +1,9 @@
+pillow
+pyscreeze
+psutil
+nextcord
+pyautogui
+requests
+cryptography
+pyinstaller
+pynput

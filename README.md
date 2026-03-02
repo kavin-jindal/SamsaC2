@@ -76,6 +76,57 @@
   
   
   ## Quick Start
+  ### Discord Bot Setup
+
+Before using the compiler, you need to set up a Discord bot and obtain necessary credentials:
+
+#### Step 1: Create a Discord Bot
+
+1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click **"New Application"** and give it a name
+3. Navigate to the **"Bot"** section and click **"Add Bot"**
+4. Under **TOKEN**, click **"Copy"** to copy your bot token (keep this secret!)
+
+#### Step 2: Configure Bot Intents
+
+1. In the Bot section, scroll to **"INTENTS"**
+2. Enable the following intents:
+   - **Message Content Intent** (required for command reading)
+   - **Server Members Intent** (for member management)
+   - **Guilds** (for server access)
+
+#### Step 3: Set Bot Permissions
+
+1. Navigate to **"OAuth2"** → **"URL Generator"**
+2. Under **"SCOPES"**, select:
+   - `bot`
+3. Under **"PERMISSIONS"**, select:
+   - **Administrator** (to ensure full access)
+4. Copy the generated URL and use it to invite the bot to your server
+
+#### Step 4: Compiler Configuration
+
+When running `compiler.py`, you will be prompted to enter:
+
+- **Bot Token**: Paste the token from your Discord bot (obtained from Developer Portal)
+- **Prefix**: Choose a command prefix (e.g., `!`, `$`, `.`) for executing commands
+- **Executable Name**: Name for the compiled executable file (e.g., `samsac2`)
+- **Server Name**: Name of the Discord server where the C2 will operate
+- **Encryption Key**: A Fernet key for encrypting/decrypting files
+
+#### Generating a Fernet Encryption Key
+
+To generate a Fernet key, run:
+
+```python
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key.decode())
+```
+
+Copy the generated key and paste it when prompted in the compiler.
+
+  ## Setup 
   
   ### Step 1: Install Dependencies
   

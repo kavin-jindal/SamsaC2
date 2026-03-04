@@ -74,7 +74,7 @@ async def help_command(ctx):
             "`quit` - Close remote session"),inline=False)
     embed.add_field(name="File Transfer",
         value=(
-            "`send` - Send file to client\n"
+            "`send [location]` - Send file to client\n"
             "`recv [file_path]` - Receive file from client"
         ),inline=False)
     embed.add_field(

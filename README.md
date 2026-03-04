@@ -168,7 +168,7 @@ Copy the generated key and paste it when prompted in the compiler.
   | `tasklist` | List running processes |
   | `stoptask <name>` | Kill a process by name |
   | `ss` | Take a screenshot |
-  | `send` | Upload a file to the client |
+  | `send <path>` | Upload a file to the client in a specific location |
   | `recv <path>` | Download a file from the client |
   | `encrypt <file>` | Encrypt a file |
   | `decrypt <file>` | Decrypt an encrypted file |

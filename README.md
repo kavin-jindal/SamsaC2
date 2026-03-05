@@ -7,7 +7,6 @@
   ## Table of Contents
   
   - [Features](#features)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Quick Start](#quick-start)
   - [Troubleshooting](#troubleshooting)
@@ -38,13 +37,6 @@
   - **Obfuscation** - PyInstaller executable compilation
   - **Session Management** - Maintain multiple active remote sessions
   
-  
-  ## Prerequisites
-  
-  - **Python 3.8+**
-  - **Windows OS** (primary target)
-  - **Administrator privileges** (for system-level operations)
-  
   ## Installation
   
   ### 1. Clone the Repository
@@ -59,19 +51,6 @@
   ```bash
   pip install -r requirements.txt
   ```
-  
-  ### Dependencies Overview
-  
-  | Package | Purpose |
-  |---------|---------|
-  | `nextcord` | Discord bot framework |
-  | `pyscreeze` | Screenshot capture |
-  | `psutil` | Process management |
-  | `pyautogui` | Automated GUI control |
-  | `requests` | HTTP requests |
-  | `cryptography` | Fernet encryption |
-  | `pillow` | Image manipulation |
-  | `pyinstaller` | Executable compilation |
   
   
   

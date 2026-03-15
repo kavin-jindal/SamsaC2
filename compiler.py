@@ -12,7 +12,8 @@ banner = '''
 '''
 import os
 print(banner)
-print("[+] Developed by Avyukt Security")
+print("[+] Developed by Kavin Jindal")
+print("[+] https://github.com/kavin-jindal/SamsaC2")
 while True:
     x = input("\t\n[+] Press 'Enter' to generate payload: ")    
     token = input("[i] Enter token of the discord bot>> ")

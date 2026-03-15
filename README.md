@@ -1,4 +1,6 @@
   # SamsaC2 - Discord Command & Control Framework
+
+  
   
   A Discord-based Command and Control (C2) framework for remote system management and security research. This project demonstrates advanced command execution, system manipulation, and remote administration capabilities through Discord bot integration.
   

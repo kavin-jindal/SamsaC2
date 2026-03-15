@@ -313,7 +313,7 @@ while True:
 
 
     exe_choice = input("\n[?] Press enter to compile the script into an executable>> ")
-    print("\npython3 -m PyInstaller --noconsole --onefile {exe_name}.py")
+    print(f"\npython3 -m PyInstaller --noconsole --onefile {exe_name}.py")
     
     os.system(f"python3 -m PyInstaller --noconsole --onefile {exe_name}.py")
 

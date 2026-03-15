@@ -85,52 +85,10 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
 
 #### Step 4: Compiler Configuration
 
-When running `compiler.py`, you will be prompted to enter:
+- Run the compiler.py file using python3 compiler.py. Press Enter to initiate the process.
 
-- **Bot Token**: Paste the token from your Discord bot (obtained from Developer Portal)
-- **Prefix**: Choose a command prefix (e.g., `!`, `$`, `.`) for executing commands
-- **Executable Name**: Name for the compiled executable file (e.g., `samsac2`)
-- **Server Name**: Name of the Discord server where the C2 will operate
-- **Encryption Key**: A Fernet key for encrypting/decrypting files
 
-#### Generating a Fernet Encryption Key
 
-To generate a Fernet key, run:
-
-```python
-from cryptography.fernet import Fernet
-key = Fernet.generate_key()
-print(key.decode())
-```
-
-Copy the generated key and paste it when prompted in the compiler.
-
-  ## Setup 
-  
-  ### Step 1: Install Dependencies
-  
-  Install all required Python packages:
-  
-  ```bash
-  pip install -r requirements.txt
-  ```
-  
-  ### Step 2: Run the Compiler
-  
-  Use the compiler script to generate scripts and their executable versions:
-  
-  ```bash
-  python compiler.py
-  ```
-  
-  This will:
-  - Generate the C2 script
-  - Generate compiled executables using PyInstaller
-  - Place outputs in the `dist/` directory
-  
-  ### Step 3: Use Generated Executable
-  
-  Locate your compiled executable in the `dist/` folder. Run it as a standalone program without requiring Python installation on target systems.
   
   
   ### Discord Commands

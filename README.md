@@ -88,7 +88,6 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
 - Run the compiler.py file using python3 compiler.py. Press Enter to initiate the process.
 
 ![img1](/images/1.png)
-
 - Input all the details as asked
 
 ![img2](/images/2.png)

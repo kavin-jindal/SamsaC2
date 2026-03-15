@@ -14,7 +14,6 @@
   - [Contributing](#contributing)
   - [Disclaimer](#disclaimer)
   - [Contact & Support](#contact--support)
-  - [About the Developers](#about-the-developers)
   
   ## Features
   
@@ -262,21 +261,10 @@ print(key.decode())
   
   **LEGAL WARNING**: This software is for authorized security testing and educational purposes only. Unauthorized access to computer systems is     illegal under the Computer Fraud and Abuse Act (18 U.S.C. § 1030) and similar international laws. The author is not responsible for misuse or damages caused by this software.
   
-  ## About the Developers
-
-  ### Avyukt Security
-    
-  - [**Medium**](https://medium.com/@avyuktsec)
-  - [**LinkedIn**](https://www.linkedin.com/company/avyukt-security/)
-  - [**Website**](https://avyukt-security.gitbook.io/home/team)
-  
   
   ## Contact & Support
   
   For questions or issues, open a GitHub issue or submit a pull request.
   
-  ---
-  
-  **Last Updated**: March 4, 2026  
-  **Status**: Active Development  
+ 
   

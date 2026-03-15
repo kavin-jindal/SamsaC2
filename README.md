@@ -1,3 +1,5 @@
+![img1](/images/1.png)
+
   # SamsaC2 - Discord Command & Control Framework  
   
   A Discord-based Command and Control (C2) framework for remote system management and security research. This project demonstrates advanced command execution, system manipulation, and remote administration capabilities through Discord bot integration.
@@ -85,8 +87,6 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
 #### Step 4: Compiler Configuration
 
 - Run the compiler.py file using python3 compiler.py. Press Enter to initiate the process.
-
-![img1](/images/1.png)
 - Input all the details as asked
 
 ![img2](/images/2.png)

@@ -1,6 +1,4 @@
-  # SamsaC2 - Discord Command & Control Framework
-
-  
+  # SamsaC2 - Discord Command & Control Framework  
   
   A Discord-based Command and Control (C2) framework for remote system management and security research. This project demonstrates advanced command execution, system manipulation, and remote administration capabilities through Discord bot integration.
   
@@ -88,7 +86,13 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
 #### Step 4: Compiler Configuration
 
 - Run the compiler.py file using python3 compiler.py. Press Enter to initiate the process.
+
+![img1](/images/1.png)
+
 - Input all the details as asked
+
+![img2](/images/2.png)
+
 - Make sure to use the Discord server where the bot is invited and has the relevant permissions.
 - Next, to generate the Fernet key, use the following script or use a third-party service like https://8gwifi.org/fernet.jsp.
 
@@ -101,21 +105,40 @@ print(key.decode())
 ```
 - Copy the generated key and paste it when prompted in the compiler.
 - After entering the key you will see that the script has been generated.
+
+![img3](/images/3.png)
+
 - Upon pressing enter, the script will be compiled into an executable.
 - After a few seconds the executable will be compiled via PyInstaller and will be available in the `/dist` folder.
+
+![img4](/images/5.png)
+
+![img5](/images/6.png)
+
+
 - You can now execute the compiled file on the system and get remote access on your desired Discord server.
 
 ## Testing the payload
 - Upon executing `[filename].exe` you will receive a connection on the Discord Server from the bot. The bot will automatically create a new channel specifically used to operate the target machine where the file was executed.
+
+![img6](/images/7.png)
+
 - This enables the user to manage multiple devices efficiently at the same time using the C2 framework.
 - You will receive a live screenshot of the target along with basic information of the target device.
+
+![img7](/images/8.png)
+
 - Next, you can use the help command with the desired prefix that you initially entered in the compiler to view the list of available commands.
+
+![img8](/images/9.png)
+
+
 - The possibilities are endless now. You can execute system commands using cmd `[command]` .  To change the working directory you will have to use `cd [path]` .
 - You can also implant files on the target using `send`. Files from the target can be fetched and sent to the Discord server by the bot using `recv [file path]`.
 - The help menu can be referred to understand the usage of other commands. For any more queries or problems you can create an Issue on the Github repository.
   
   
-  ### Discord Commands
+  ## Discord Commands
   
   For users running a bot instance, the following commands are available
   (using the configured prefix):

@@ -86,9 +86,31 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
 #### Step 4: Compiler Configuration
 
 - Run the compiler.py file using python3 compiler.py. Press Enter to initiate the process.
+- Input all the details as asked
+- Make sure to use the Discord server where the bot is invited and has the relevant permissions.
+- Next, to generate the Fernet key, use the following script or use a third-party service like https://8gwifi.org/fernet.jsp.
 
+Generating a Fernet Key for file encryption/decryption
+To generate a Fernet key, run:
+```p
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key.decode())
+```
+- Copy the generated key and paste it when prompted in the compiler.
+- After entering the key you will see that the script has been generated.
+- Upon pressing enter, the script will be compiled into an executable.
+- After a few seconds the executable will be compiled via PyInstaller and will be available in the `/dist` folder.
+- You can now execute the compiled file on the system and get remote access on your desired Discord server.
 
-
+## Testing the payload
+- Upon executing `[filename].exe` you will receive a connection on the Discord Server from the bot. The bot will automatically create a new channel specifically used to operate the target machine where the file was executed.
+- This enables the user to manage multiple devices efficiently at the same time using the C2 framework.
+- You will receive a live screenshot of the target along with basic information of the target device.
+- Next, you can use the help command with the desired prefix that you initially entered in the compiler to view the list of available commands.
+- The possibilities are endless now. You can execute system commands using cmd `[command]` .  To change the working directory you will have to use `cd [path]` .
+- You can also implant files on the target using `send`. Files from the target can be fetched and sent to the Discord server by the bot using `recv [file path]`.
+- The help menu can be referred to understand the usage of other commands. For any more queries or problems you can create an Issue on the Github repository.
   
   
   ### Discord Commands
@@ -121,7 +143,7 @@ Before using the compiler, you need to set up a Discord bot and obtain necessary
   
   ## Future updates
   - [ ] Keylogger integration
-  - [ ] Webcam and microphone surveilance
+  - [ ] Webcam and microphone surveillance
   - [ ] Display manipulation
   
   
